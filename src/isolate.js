@@ -315,7 +315,6 @@ function createIsolation(config, script, callbacks, container, error) {
       for (var k in config.deps) {
 
         var scr = document.createElement('script');
-        scr.src = config.path + "/" + config.deps[k] + ".js";
         scr.async = false;
         scr.type = "text/javascript";
         scr.charset = "UTF-8";
@@ -323,12 +322,16 @@ function createIsolation(config, script, callbacks, container, error) {
         scr.setAttribute('data-isolation', _name);
         scr.addEventListener("load", onScriptLoad);
         scr.addEventListener("error", onScriptError);
+        if (config.deps[k].toLowerCase().startsWith('http')) {
+            scr.src = config.deps[k];
+        } else {
+            scr.src = config.path + "/" + config.deps[k] + ".js";
+        }
         scriptCount++;
 
 
         if (config.depend && config.depend[k] && !isScrDepsLoaded(config.depend[
             k], _scriptsLoaded)) {
-          // console.log('deferring: ' + k);
           scripts.push(k);
           scripts.push(scr);
         } else {
