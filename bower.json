@@ -1,5 +1,5 @@
 {
-  "name": "confine",
+  "name": "pmsi-confine",
   "main": "dist/confine.js",
   "version": "0.1.5",
   "description": "Solves the problem of using multiple versions of javascript libraries and executing arbitrary javascript in isolated namespaces",
