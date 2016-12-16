@@ -1,6 +1,6 @@
 {
   "name": "confine",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Solves the problem of using multiple versions of javascript libraries and creating isolated namespaces.",
   "dependencies": {
     "mocha-lcov-reporter": "0.0.1"
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nchinan/confine.git"
+    "url": "https://github.com/PMSI-AlignAlytics/confine.git"
   },
   "author": "Neville Chinan",
   "contributors": [{
@@ -27,7 +27,7 @@
   }],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nchinan/confine/issues"
+    "url": "https://github.com/PMSI-AlignAlytics/confine/issues"
   },
-  "homepage": "https://github.com/nchinan/confine"
+  "homepage": "https://github.com/PMSI-AlignAlytics/confine"
 }
