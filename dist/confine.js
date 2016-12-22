@@ -380,7 +380,7 @@ function createIsolation(config, script, callbacks, container, error) {
         scr.setAttribute('data-isolation', _name);
         scr.addEventListener("load", onScriptLoad);
         scr.addEventListener("error", onScriptError);
-        if (config.deps[k].toLowerCase().startsWith('http')) {
+        if (config.deps[k].match(/^https?\:\/\//i)) {
             scr.src = config.deps[k];
         } else {
             scr.src = config.path + "/" + config.deps[k] + ".js";
