@@ -1,8 +1,6 @@
 confine
 --
 
-[![Build Status](https://travis-ci.org/nchinan/confine.svg)](https://travis-ci.org/nchinan/confine)
-
 Solves the problem of using multiple versions of javascript libraries and executing arbitrary javascript in isolated namespaces.
 
 Invoking `confine` will return an `isolate`.  An isolate is an context where you can execute javascript code in confinement to your global namespace.

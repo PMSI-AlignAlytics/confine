@@ -325,7 +325,7 @@ function createIsolation(config, script, callbacks, container, error) {
         if (config.deps[k].match(/^https?\:\/\//i)) {
             scr.src = config.deps[k];
         } else {
-            scr.src = config.path + "/" + config.deps[k] + ".js";
+            scr.src = config.path + "/" + config.deps[k];
         }
         scriptCount++;
 
